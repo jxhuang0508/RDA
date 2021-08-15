@@ -83,23 +83,25 @@ Pre-trained models can be downloaded [here](https://github.com/jxhuang0508/RDA/r
 
 To evaluate RDA_FAA_T:
 ```bash
-python evaluate_advent.py --test-flipping --data-dir ../SVMin/data/Cityscapes --restore-from ../SVMin/pretrained_models/SVMin_AL_TR_pretrained.pth --save ../SVMin/experiments/GTA2Cityscapes_SVMin_AL_TR
+python evaluate_advent.py --test-flipping --data-dir ../RDA/data/Cityscapes --restore-from ../RDA/pretrained_models/model_FAA_T.pth --save ../RDA/experiments/GTA2Cityscapes_RDA
+```
+
+
+To evaluate RDA_FAA_S_T:
+```bash
+python evaluate_advent.py --test-flipping --data-dir ../RDA/data/Cityscapes --restore-from ../RDA/pretrained_models/model_FAA_S_T.pth.pth --save ../RDA/experiments/GTA2Cityscapes_RDA
 ```
 
 ### Training
-To train SVMin:
+To train RDA:
 ```bash
-python train.py --cfg configs/SVMin.yml
+python train.py --cfg configs/RDA.yml
 ```
 
-To test SVMin:
+To test RDA:
 ```bash
-python test.py --cfg configs/SVMin.yml
+python test.py --cfg configs/RDA.yml
 ```
-
-To train SVMin_AL and SVMin_AL_TR:
-
-Coming soon.
 
 ## Acknowledgements
 This codebase is heavily borrowed from [ADVENT](https://github.com/valeoai/ADVENT) and [CRST](https://github.com/yzou2/CRST).
