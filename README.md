@@ -86,7 +86,6 @@ To evaluate RDA_FAA_T:
 python evaluate_advent.py --test-flipping --data-dir ../RDA/data/Cityscapes --restore-from ../RDA/pretrained_models/model_FAA_T.pth --save ../RDA/experiments/GTA2Cityscapes_RDA
 ```
 
-
 To evaluate RDA_FAA_S_T:
 ```bash
 python evaluate_advent.py --test-flipping --data-dir ../RDA/data/Cityscapes --restore-from ../RDA/pretrained_models/model_FAA_S_T.pth.pth --save ../RDA/experiments/GTA2Cityscapes_RDA
@@ -100,11 +99,11 @@ python train.py --cfg configs/RDA.yml
 
 To test RDA:
 ```bash
-python test.py --cfg configs/RDA.yml
+sh test_best.sh
 ```
 
 ## Acknowledgements
 This codebase is heavily borrowed from [ADVENT](https://github.com/valeoai/ADVENT) and [CRST](https://github.com/yzou2/CRST).
 
 ## Contact
-If you have any questions, please contact: dayan.guan@ntu.edu.sg
+If you have any questions, please contact: jiaxing.huang@ntu.edu.sg
