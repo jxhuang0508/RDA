@@ -1,4 +1,4 @@
-# Scale variance minimization for unsupervised domain adaptation in image segmentation
+# RDA: Robust Domain Adaptation via Fourier Adversarial Attacking
 
 ## Updates
 
@@ -8,28 +8,25 @@
 
 ## Paper
 ![](./teaser.png)
-[Scale variance minimization for unsupervised domain adaptation in image segmentation](https://www.researchgate.net/publication/347421562_Scale_variance_minimization_for_unsupervised_domain_adaptation_in_image_segmentation)  
- [Dayan Guan](https://scholar.google.com/citations?user=9jp9QAsAAAAJ&hl=en), [Jiaxing Huang](https://scholar.google.com/citations?user=czirNcwAAAAJ&hl=en&oi=ao),  [Xiao Aoran](https://scholar.google.com/citations?user=yGKsEpAAAAAJ&hl=en), [Shijian Lu](https://scholar.google.com/citations?user=uYmK-A0AAAAJ&hl=en)  
+[RDA: Robust Domain Adaptation via Fourier Adversarial Attacking](https://arxiv.org/abs/2106.02874)  
+ [Jiaxing Huang](https://scholar.google.com/citations?user=czirNcwAAAAJ&hl=en&oi=ao), [Dayan Guan](https://scholar.google.com/citations?user=9jp9QAsAAAAJ&hl=en), [Xiao Aoran](https://scholar.google.com/citations?user=yGKsEpAAAAAJ&hl=en), [Shijian Lu](https://scholar.google.com/citations?user=uYmK-A0AAAAJ&hl=en)  
  School of Computer Science Engineering, Nanyang Technological University, Singapore  
- Pattern Recognition, 2021.
+ International Conference on Computer Vision, 2021.
  
-If you find this code useful for your research, please cite our [paper](https://www.researchgate.net/publication/347421562_Scale_variance_minimization_for_unsupervised_domain_adaptation_in_image_segmentation):
+If you find this code/paper useful for your research, please cite our [paper](https://arxiv.org/abs/2106.02874):
 
 ```
-@article{guan2021scale,
-  title={Scale variance minimization for unsupervised domain adaptation in image segmentation},
-  author={Guan, Dayan and Huang, Jiaxing and Lu, Shijian and Xiao, Aoran},
-  journal={Pattern Recognition},
-  volume={112},
-  pages={107764},
-  year={2021},
-  publisher={Elsevier}
+@article{huang2021rda,
+  title={RDA: Robust Domain Adaptation via Fourier Adversarial Attacking},
+  author={Huang, Jiaxing and Guan, Dayan and Xiao, Aoran and Lu, Shijian},
+  journal={arXiv preprint arXiv:2106.02874},
+  year={2021}
 }
 ```
 
 ## Abstract
 
-We focus on unsupervised domain adaptation (UDA) in image segmentation. Existing works address this challenge largely by aligning inter-domain representations, which may lead over-alignment that impairs the semantic structures of images and further target-domain segmentation performance. We design a scale variance minimization (SVMin) method by enforcing the intra-image semantic structure consistency in the target domain. Specifically, SVMin leverages an intrinsic property that simple scale transformation has little effect on the semantic structures of images. It thus introduces certain supervision in the target domain by imposing a scale-invariance constraint while learning to segment an image and its scale-transformation concurrently. Additionally, SVMin is complementary to most existing UDA techniques and can be easily incorporated with consistent performance boost but little extra parameters. Extensive experiments show that our method achieves superior domain adaptive segmentation performance as compared with the state-of-the-art. Preliminary studies show that SVMin can be easily adapted for UDA-based image classification.
+Unsupervised domain adaptation (UDA) involves a supervised loss in a labeled source domain and an unsupervised loss in an unlabeled target domain, which often faces more severe overfitting (than classical supervised learning) as the supervised source loss has clear domain gap and the unsupervised target loss is often noisy due to the lack of annotations. This paper presents RDA, a robust domain adaptation technique that introduces adversarial attacking to mitigate overfitting in UDA. We achieve robust domain adaptation by a novel Fourier adversarial attacking (FAA) method that allows large magnitude of perturbation noises but has minimal modification of image semantics, the former is critical to the effectiveness of its generated adversarial samples due to the existence of domain gaps. Specifically, FAA decomposes images into multiple frequency components (FCs) and generates adversarial samples by just perturbating certain FCs that capture little semantic information. With FAA-generated samples, the training can continue the random walk and drift into an area with a flat loss landscape, leading to more robust domain adaptation. Extensive experiments over multiple domain adaptation tasks show that RDA can work with different computer vision tasks with superior performance.
 
 ## Installation
 1. Conda enviroment:
