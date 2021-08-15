@@ -51,28 +51,28 @@ pip install packaging h5py
 
 4. Clone the repo:
 ```bash
-git clone https://github.com/Dayan-Guan/SVMin.git
-pip install -e ./SVMin
-cp SVMin/crst/*py CRST
-cp SVMin/crst/deeplab/*py CRST/deeplab
+https://github.com/jxhuang0508/RDA.git
+pip install -e ./RDA
+cp RDA/crst/*py CRST
+cp RDA/crst/deeplab/*py CRST/deeplab
 ```
 
 ### Prepare Dataset
 * **GTA5**: Please follow the instructions [here](https://download.visinf.tu-darmstadt.de/data/from_games/) to download images and semantic segmentation annotations. The GTA5 dataset directory should have this basic structure:
 ```bash
-SVMin/data/GTA5/                               % GTA dataset root
-SVMin/data/GTA5/images/                        % GTA images
-SVMin/data/GTA5/labels/                        % Semantic segmentation labels
+RDA/data/GTA5/                               % GTA dataset root
+RDA/data/GTA5/images/                        % GTA images
+RDA/data/GTA5/labels/                        % Semantic segmentation labels
 ...
 ```
 
 * **Cityscapes**: Please follow the instructions in [Cityscape](https://www.cityscapes-dataset.com/) to download the images and validation ground-truths. The Cityscapes dataset directory should have this basic structure:
 ```bash
-SVMin/data/Cityscapes/                         % Cityscapes dataset root
-SVMin/data/Cityscapes/leftImg8bit              % Cityscapes images
-SVMin/data/Cityscapes/leftImg8bit/val
-SVMin/data/Cityscapes/gtFine                   % Semantic segmentation labels
-SVMin/data/Cityscapes/gtFine/val
+RDA/data/Cityscapes/                         % Cityscapes dataset root
+RDA/data/Cityscapes/leftImg8bit              % Cityscapes images
+RDA/data/Cityscapes/leftImg8bit/val
+RDA/data/Cityscapes/gtFine                   % Semantic segmentation labels
+RDA/data/Cityscapes/gtFine/val
 ...
 ```
 
@@ -80,7 +80,7 @@ SVMin/data/Cityscapes/gtFine/val
 Pre-trained models can be downloaded [here](https://github.com/Dayan-Guan/SVMin/releases/tag/Latest) and put in ```SVMin/pretrained_models```
 
 ### Evaluation
-To evaluate SVMin:
+To evaluate RDA:
 ```bash
 python test.py --cfg configs/SVMin_pretrained.yml
 ```
