@@ -77,20 +77,11 @@ RDA/data/Cityscapes/gtFine/val
 ```
 
 ### Pre-trained models
-Pre-trained models can be downloaded [here](https://github.com/Dayan-Guan/SVMin/releases/tag/Latest) and put in ```SVMin/pretrained_models```
+Pre-trained models can be downloaded [here](https://github.com/jxhuang0508/RDA/releases/tag/Latest) and put in ```RDA/pretrained_models```
 
 ### Evaluation
-To evaluate RDA:
-```bash
-python test.py --cfg configs/SVMin_pretrained.yml
-```
 
-To evaluate SVMin_AL:
-```bash
-python test.py --cfg configs/SVMin_AL_pretrained.yml
-```
-
-To evaluate SVMin_AL_TR:
+To evaluate RDA_FAA_T:
 ```bash
 python evaluate_advent.py --test-flipping --data-dir ../SVMin/data/Cityscapes --restore-from ../SVMin/pretrained_models/SVMin_AL_TR_pretrained.pth --save ../SVMin/experiments/GTA2Cityscapes_SVMin_AL_TR
 ```
