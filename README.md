@@ -92,12 +92,12 @@ python evaluate_advent.py --test-flipping --data-dir ../RDA/data/Cityscapes --re
 ```
 
 ### Training
-To train RDA:
+To train RDA_FAA_T:
 ```bash
 python train.py --cfg configs/RDA.yml
 ```
 
-To test RDA:
+To test RDA_FAA_T:
 ```bash
 sh test_best.sh
 ```
