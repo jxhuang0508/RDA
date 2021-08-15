@@ -30,7 +30,7 @@ DATA_LIST_PATH = './dataset/list/cityscapes/val.lst'
 SAVE_PATH = './cityscapes/eval'
 
 TEST_IMAGE_SIZE = '1024,2048'
-TEST_SCALE = '1.0,0.8,0.5'
+TEST_SCALE = '1.0, 0.84, 0.66, 0.5'
 IGNORE_LABEL = 255
 NUM_CLASSES = 19
 NUM_STEPS = 500 # Number of images in the validation set.
