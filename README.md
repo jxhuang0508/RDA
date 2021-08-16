@@ -31,8 +31,8 @@ Unsupervised domain adaptation (UDA) involves a supervised loss in a labeled sou
 ## Installation
 1. Conda enviroment:
 ```bash
-conda create -n svmin python=3.6
-conda activate svmin
+conda create -n rda python=3.6
+conda activate rda
 conda install -c menpo opencv
 pip install torch==1.0.0 torchvision==0.2.1
 ```
