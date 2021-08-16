@@ -83,23 +83,27 @@ Pre-trained models can be downloaded [here](https://github.com/jxhuang0508/RDA/r
 
 To evaluate RDA_FAA_T:
 ```bash
+cd RDA/CRST
 python evaluate_advent.py --test-flipping --data-dir ../RDA/data/Cityscapes --restore-from ../RDA/pretrained_models/model_FAA_T.pth --save ../RDA/experiments/GTA2Cityscapes_RDA
 ```
 
 To evaluate RDA_FAA_S_T:
 ```bash
+cd RDA/CRST
 python evaluate_advent.py --test-flipping --data-dir ../RDA/data/Cityscapes --restore-from ../RDA/pretrained_models/model_FAA_S_T.pth.pth --save ../RDA/experiments/GTA2Cityscapes_RDA
 ```
 
 ### Training
 To train RDA_FAA_T:
 ```bash
+cd RDA/rda/scripts
 python train.py --cfg configs/RDA.yml
 ```
 
 To test RDA_FAA_T:
 ```bash
-sh test_best.sh
+cd RDA/CRST
+./test_best.sh
 ```
 
 ## Acknowledgements
